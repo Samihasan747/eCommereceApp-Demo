@@ -1,4 +1,6 @@
 import React from "react";
+import Sidebar from './Sidebar'
+
 
 export default function Navbar(props) {
   return (
@@ -6,12 +8,14 @@ export default function Navbar(props) {
 
       <nav className="navbar navbar-expand-lg bg-body-tertiary ">
         <div className="container-fluid">
+          {/* Logo */}
           <a className="navbar-brand" href="/">
             <img src={props.logo} alt=""></img>
           </a>
           {/* Title */}
           <a className="navbar-brand" href="/">
             {props.title}
+
           </a>
           <button
             className="navbar-toggler"
@@ -25,24 +29,35 @@ export default function Navbar(props) {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
+
+            
+
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
                 {/* Home */}
+              <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/">
                   {props.home}
                 </a>
               </li>
-              <li className="nav-item2">
+
+                {/* <li className="nav-item">
+                  <Sidebar />
+                </li> */}
+
+
                 {/* Checkout */}
+              <li className="nav-item2">
                 <a className="nav-link" href="/">
                   {props.Checkout}
                 </a>
               </li>
+
               <li className="nav-item3">
                 <a className="nav-link" href="/">
                   {props.Username}
                 </a>
               </li>
+
               <li className="nav-item dropdown">
                 {/* For Dropdown use this code  */}
                 {/* <a
@@ -75,13 +90,17 @@ export default function Navbar(props) {
                   </li>
                   </ul> */}
               </li>
-              <li className="nav-item">
+
                 {/* Signup */}
+              <li className="nav-item">
                 <a className="nav-link " aria-disabled="true" href="/">
                   {props.Signup}
                 </a>
               </li>
             </ul>
+
+
+
             <form className="d-flex" role="search">
               <input
                 className="form-control me-2"

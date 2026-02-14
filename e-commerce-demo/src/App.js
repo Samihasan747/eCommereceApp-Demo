@@ -1,5 +1,6 @@
 import "./App.css";
 import Navbar from "./Components/Navbar";
+import Sidebar from "./Components/Sidebar";
 
 
 
@@ -14,6 +15,7 @@ function App() {
         Username="Username"
         Signup="Sign Up/Log In"
       />
+      <Sidebar/>
     </>
   );
 }
